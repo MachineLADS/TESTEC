@@ -23,13 +23,13 @@ const Home = () => {
   };
 
   const handleFinish = () => {
-    alert(`Your favorite animes: ${favorites.join(", ")}`);
+    alert(`Seus animes preferiodos são: ${favorites.join(", ")}`);
     navigate("/thank-you");
   };
 
   return (
     <C.Container>
-      <C.Title>Select Your Favorite Animes</C.Title>
+      <C.Title>Slecione seus animes favotios</C.Title>
 
       {/* Lista de animes para selecionar */}
       <C.List>
