@@ -37,7 +37,7 @@ const Home = () => {
           <C.Item key={anime} isFavorite={favorites.includes(anime)}>
             <span>{anime}</span>
             <Button
-              Text={favorites.includes(anime) ? "Remove" : "Add"}
+              Text={favorites.includes(anime) ? "Remover" : "Adicionar"}
               onClick={() => toggleFavorite(anime)}
             />
           </C.Item>
@@ -46,7 +46,7 @@ const Home = () => {
 
       {/* Espaço para os animes favoritos */}
       <C.FavoritesSection>
-        <C.SubTitle>Your Favorites</C.SubTitle>
+        <C.SubTitle>Seus favoritos</C.SubTitle>
         {favorites.length > 0 ? (
           <C.FavoritesList>
             {favorites.map((anime) => (
@@ -56,11 +56,11 @@ const Home = () => {
             ))}
           </C.FavoritesList>
         ) : (
-          <C.NoFavorites>No favorites selected yet.</C.NoFavorites>
+          <C.NoFavorites>Nenhum selecionado.</C.NoFavorites>
         )}
       </C.FavoritesSection>
 
-      <Button Text="Finish" onClick={handleFinish} />
+      <Button Text="Finalizar" onClick={handleFinish} />
     </C.Container>
   );
 };
